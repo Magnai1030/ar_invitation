@@ -33,7 +33,7 @@ const PHOTOS: { src: string; alt: string }[] = [
   { src: '/10.jpg', alt: '10' },
   { src: '/11.jpg', alt: '11' },
   { src: '/12.jpg', alt: '12' },
-  { src: '/13.jpg', alt: '13' },
+  { src: '/14.jpg', alt: '13' },
 ];
 
 const LETTER = (you: string) => `My love,
