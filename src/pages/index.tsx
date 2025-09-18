@@ -5,8 +5,13 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic'
 
 const Counter = dynamic(() => import('@/components/Counter'), {
-  loading: () => <p>Loading...</p>,
+  ssr: false,
 })
+
+const ModelViewer = dynamic(() => import('../components/ModelViewer'), {
+  ssr: false,
+});
+
 
 // ✏️ Personalize these
 const YOUR_NAME = 'Magnai';
@@ -267,6 +272,17 @@ export default function HomePage() {
                       />
                     </div>
 
+                  </div>
+                </div>
+              </section>
+            </FadeIn>
+
+            <FadeIn>
+              <section className="px-4 pt-4 pb-2">
+                <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
+                  <div className="rounded-2xl border border-white/20 bg-white/10 p-5 relative col-span-2">
+                    <h3 className="font-bold">Show model ✨</h3>
+                    <ModelViewer />
                   </div>
                 </div>
               </section>
